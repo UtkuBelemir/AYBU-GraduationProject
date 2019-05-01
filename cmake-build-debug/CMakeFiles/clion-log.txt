@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/utkubelemir/Desktop/OKUL/Graduation Project/opencv-color-1"
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/utkubelemir/Desktop/AYBU-GraduationProject
 -- The C compiler identification is AppleClang 10.0.0.10001044
 -- The CXX compiler identification is AppleClang 10.0.0.10001044
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
@@ -16,4 +16,4 @@
 -- Found OpenCV: /usr/local (found version "3.4.5") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/utkubelemir/Desktop/OKUL/Graduation Project/opencv-color-1/cmake-build-debug
+-- Build files have been written to: /Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug

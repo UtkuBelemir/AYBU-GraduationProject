@@ -1,4 +1,4 @@
-# Install script for directory: /Users/utkubelemir/Desktop/OKUL/Graduation Project/opencv-color-1
+# Install script for directory: /Users/utkubelemir/Desktop/AYBU-GraduationProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/utkubelemir/Desktop/OKUL/Graduation Project/opencv-color-1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
