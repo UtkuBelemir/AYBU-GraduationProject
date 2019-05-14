@@ -19,11 +19,16 @@ double calculateHUMoments(cv::Moments realMoments, cv::Moments targetMoments){
 int main(int argc, char **argv) {
     // Start video capturing
     cv::VideoCapture cap(0);
-    //BLUE
+    // GREEN
+    cv::Scalar colorLowStart = cv::Scalar(50, 100, 100);
+    cv::Scalar colorLowEnd = cv::Scalar(60, 255, 255);
+    cv::Scalar colorUpStart = cv::Scalar(60, 100, 100);
+    cv::Scalar colorUpEnd = cv::Scalar(80, 255, 255);
+    /*//BLUE
     cv::Scalar colorLowStart = cv::Scalar(80, 100, 100);
     cv::Scalar colorLowEnd = cv::Scalar(100, 255, 255);
     cv::Scalar colorUpStart = cv::Scalar(100, 100, 100);
-    cv::Scalar colorUpEnd = cv::Scalar(125, 255, 255);
+    cv::Scalar colorUpEnd = cv::Scalar(125, 255, 255);*/
     /*//BLACK
     cv::Scalar colorLowStart = cv::Scalar(0,0,0);
     cv::Scalar colorLowEnd = cv::Scalar(0,0,20);
@@ -42,7 +47,7 @@ int main(int argc, char **argv) {
     size_t contourIterator = 0;     // Iterator variable for real-time image contours.
 
     // Load template image
-    cv::Mat targetImage = cv::imread("/Users/utkubelemir/Desktop/AYBU-GraduationProject/xx.jpg");
+    cv::Mat targetImage = cv::imread("/Users/utkubelemir/Desktop/AYBU-GraduationProject/kalem.png");
     cv::Mat templateColorLowerBound, templateColorUpperBound;
 
     // Convert template image's RGB colors to HSV
