@@ -123,6 +123,33 @@ opencv_color_1/fast:
 	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/build
 .PHONY : opencv_color_1/fast
 
+colors.o: colors.cpp.o
+
+.PHONY : colors.o
+
+# target to build an object file
+colors.cpp.o:
+	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/colors.cpp.o
+.PHONY : colors.cpp.o
+
+colors.i: colors.cpp.i
+
+.PHONY : colors.i
+
+# target to preprocess a source file
+colors.cpp.i:
+	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/colors.cpp.i
+.PHONY : colors.cpp.i
+
+colors.s: colors.cpp.s
+
+.PHONY : colors.s
+
+# target to generate assembly for a file
+colors.cpp.s:
+	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/colors.cpp.s
+.PHONY : colors.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... opencv_color_1"
+	@echo "... colors.o"
+	@echo "... colors.i"
+	@echo "... colors.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build
 CMakeFiles/opencv_color_1.dir/all:
 	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/depend
 	$(MAKE) -f CMakeFiles/opencv_color_1.dir/build.make CMakeFiles/opencv_color_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target opencv_color_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target opencv_color_1"
 .PHONY : CMakeFiles/opencv_color_1.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/opencv_color_1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/opencv_color_1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/opencv_color_1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/opencv_color_1.dir/rule

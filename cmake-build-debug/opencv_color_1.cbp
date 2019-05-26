@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/utkubelemir/Desktop/AYBU-GraduationProject/colors.cpp">
+			<Option target="opencv_color_1"/>
+		</Unit>
+		<Unit filename="/Users/utkubelemir/Desktop/AYBU-GraduationProject/colors.h">
+			<Option target="opencv_color_1"/>
+		</Unit>
 		<Unit filename="/Users/utkubelemir/Desktop/AYBU-GraduationProject/main.cpp">
 			<Option target="opencv_color_1"/>
 		</Unit>

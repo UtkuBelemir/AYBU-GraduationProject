@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/utkubelemir/Desktop/AYBU-GraduationProject/colors.h
+opencv2/core/types.hpp
+/Users/utkubelemir/Desktop/AYBU-GraduationProject/opencv2/core/types.hpp
+
 /Users/utkubelemir/Desktop/AYBU-GraduationProject/main.cpp
 iostream
 -
@@ -13,6 +17,8 @@ opencv2/highgui/highgui.hpp
 /Users/utkubelemir/Desktop/AYBU-GraduationProject/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
 /Users/utkubelemir/Desktop/AYBU-GraduationProject/opencv2/imgproc/imgproc.hpp
+colors.h
+/Users/utkubelemir/Desktop/AYBU-GraduationProject/colors.h
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h
