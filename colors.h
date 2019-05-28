@@ -1,6 +1,3 @@
-//
-// Created by Utku Belemir Elmalıoğlu on 2019-05-23.
-//
 #import "opencv2/core/types.hpp"
 #ifndef OPENCV_COLOR_1_COLORS_H
 #define OPENCV_COLOR_1_COLORS_H
@@ -21,12 +18,12 @@ class Colors {
             this->lowEnd = cv::Scalar(180, 255, 255);
             this->upStart = cv::Scalar(0, 100, 100);
             this->upEnd = cv::Scalar(5, 255, 255);
-            /*//BLACK
+            /*// BLACK
             this->lowStart = cv::Scalar(0,0,0);
             this->lowEnd = cv::Scalar(0,0,20);
             this->upStart = cv::Scalar(0, 0, 20);
             this->upEnd = cv::Scalar(0,0,40);*/
-/*            // GREEN
+            /*// GREEN
             this->lowStart = cv::Scalar(30, 100, 100);
             this->lowEnd = cv::Scalar(40, 255, 255);
             this->upStart = cv::Scalar(40, 100, 100);
