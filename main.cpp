@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
 
     // Load template image
     cv::Mat targetImage = cv::imread("/Users/utkubelemir/Desktop/AYBU-GraduationProject/exampleImages/jhjhkjh.png");
+
     cv::imshow("Reference Image",targetImage);
     cv::Mat templateColorLowerBound, templateColorUpperBound;
 
@@ -46,12 +47,12 @@ int main(int argc, char **argv) {
                      cv::getStructuringElement(cv::MORPH_ELLIPSE, ignoreSize));
     cv::morphologyEx(targetImage, targetImage, cv::MORPH_CLOSE,
                      cv::getStructuringElement(cv::MORPH_ELLIPSE, ignoreSize));
-    cv::imshow("tx 1",targetImage);
+
     std::vector<std::vector<cv::Point> > targetContours;
     cv::findContours(targetImage, targetContours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
     cv::Mat targetContourImage(cv::Size(1280, 720), CV_8UC3, cv::Scalar(0, 0, 0));
     cv::drawContours(targetContourImage, targetContours, -1, cv::Scalar(255, 255, 255), 1);
-    cv::imshow("tx 2",targetContourImage);
+
     cv::Moments targetMoments = cv::moments(targetImage, false);
 
     // Create an empty variable for using active frame from camera
@@ -63,7 +64,7 @@ int main(int argc, char **argv) {
     // Create an infinite loop for real-time camera
     while (true) {
 
-        // Get frame from camera. If there is a problem, stop recording.
+        // Get frame from camera. If there is a problem, exit program.
         bool bSuccess = cap.read(realTimeFrame);
         if (!bSuccess) {
             cout << "Cannot read a frame from video stream" << endl;
@@ -100,7 +101,7 @@ int main(int argc, char **argv) {
         if (detectedObjectVisible < 0.0) {
             detectedObjectVisible = 0.0;
         }
-        cout << "Result: "<<HUMomentsResult<<endl;
+
         bool hMom = (HUMomentsResult < HUMomentThreshold && HUMomentsResult > (HUMomentThreshold * -1) && !isinf(HUMomentsResult));
         if (detectedObjectVisible > visibilityThreshold || hMom) {
             if (!hMom) {
@@ -119,11 +120,9 @@ int main(int argc, char **argv) {
         if (!hMom) {
             detectedObjectVisible -= 0.5;
         }
-        cout << "Detected: " << detectedObjectVisible<<endl;
-        // Uncomment for viewing real-time contours
+
         cv::Mat contourImage(cv::Size(1280, 720), CV_8UC3, cv::Scalar(0, 0, 0));
         cv::drawContours(contourImage, realTimeContours, -1, cv::Scalar(255, 255, 255), 1);
-        cv::imshow("Contour Image", contourImage);
         cv::imshow("Realtime", realTimeFrame);
         if (cv::waitKey(30) == 27) {
             cout << "ESC Key" << endl;
