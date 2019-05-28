@@ -4,44 +4,6 @@
 #include "colors.h"
 using namespace std;
 
-cv::Mat removeLight(cv::Mat imgAtFirst){
-    return imgAtFirst;
-    cv::Mat tempImg;
-    cv::cvtColor(imgAtFirst, tempImg, CV_BGR2YUV);
-    std::vector<cv::Mat> channels;
-    cv::split(tempImg, channels);
-    cv::equalizeHist(channels[0], channels[0]);
-    cv::merge(channels, tempImg);
-    cv::cvtColor(tempImg, tempImg, CV_YUV2BGR);
-    return tempImg;
-}
-
-cv::Mat applyCLAHE6(cv::Mat imgAtFirst){
-    // READ RGB color image and convert it to Lab
-    cv::Mat lab_image;
-    cv::cvtColor(imgAtFirst, lab_image, CV_BGR2HSV);
-
-    // Extract the L channel
-    std::vector<cv::Mat> lab_planes(3);
-    cv::split(lab_image, lab_planes);  // now we have the L image in lab_planes[0]
-
-    // apply the CLAHE algorithm to the L channel
-    cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
-    clahe->setClipLimit(4);
-    cv::Mat dst;
-    clahe->apply(lab_planes[0], dst);
-
-    // Merge the the color planes back into an Lab image
-    dst.copyTo(lab_planes[0]);
-    cv::merge(lab_planes, lab_image);
-
-    // convert back to RGB
-    cv::Mat image_clahe;
-    cv::cvtColor(lab_image, image_clahe, CV_Lab2BGR);
-
-    return image_clahe;
-}
-
 double calculateHUMoments(cv::Moments realMoments, cv::Moments targetMoments);
 
 int main(int argc, char **argv) {
@@ -53,28 +15,22 @@ int main(int argc, char **argv) {
         cout << "Error while connecting camera quiting...." << endl;
         return -1;
     }
-    int detectedObjectVisible = 0;  /*  This is a custom threshold for detected contours.
+    float detectedObjectVisible = 0.0;  /*  This is a custom threshold for detected contours.
                                         For example, when we are searching for Object X,
                                         if there are at least 5 frames including our object, spot it! */
 
     float HUMomentThreshold = 0.8;
-    int visibilityThreshold = 13;
-    int visibilityMultiplier = 1;
-    int decrementRatio = 3;
+    int visibilityThreshold = 4;
     // Define an ignore size for reducing noise in image
-    cv::Size ignoreSize = cv::Size(5, 5);
+    cv::Size ignoreSize = cv::Size(10, 10);
 
     // Load template image
-    cv::Mat targetImage = cv::imread("/Users/utkubelemir/Desktop/AYBU-GraduationProject/exampleImages/drnc.png");
-    cv::imshow("targetatfirst",targetImage);
-    targetImage = removeLight(targetImage);
-    cv::imshow("after clage",targetImage);
+    cv::Mat targetImage = cv::imread("/Users/utkubelemir/Desktop/AYBU-GraduationProject/exampleImages/jhjhkjh.png");
+    cv::imshow("Reference Image",targetImage);
     cv::Mat templateColorLowerBound, templateColorUpperBound;
 
     // Convert template image's RGB colors to HSV
     cv::cvtColor(targetImage, targetImage, cv::COLOR_BGR2HSV);
-
-    // (80, 100, 100 - 100, 255, 255 - 125, 255, 255) is color space for all blue colors
 
     // Find objects in lower color bound;
     cv::inRange(targetImage, targetColor.lowStart, targetColor.lowEnd, templateColorLowerBound);
@@ -113,7 +69,6 @@ int main(int argc, char **argv) {
             cout << "Cannot read a frame from video stream" << endl;
             break;
         }
-        realTimeFrame = removeLight(realTimeFrame);
         // Convert real-time frame to HSV
         cv::cvtColor(realTimeFrame, realTimeHSV, cv::COLOR_BGR2HSV);
 
@@ -142,12 +97,17 @@ int main(int argc, char **argv) {
         cv::Moments realTimeMoments = cv::moments(realTimeHSV, false);
         double HUMomentsResult = calculateHUMoments(realTimeMoments,targetMoments);
 
-        if (detectedObjectVisible < 0) {
-            detectedObjectVisible = 0;
+        if (detectedObjectVisible < 0.0) {
+            detectedObjectVisible = 0.0;
         }
         cout << "Result: "<<HUMomentsResult<<endl;
-        if (detectedObjectVisible > visibilityThreshold || (HUMomentsResult < HUMomentThreshold && HUMomentsResult > (HUMomentThreshold * -1))) {
-            detectedObjectVisible += 1;
+        bool hMom = (HUMomentsResult < HUMomentThreshold && HUMomentsResult > (HUMomentThreshold * -1) && !isinf(HUMomentsResult));
+        if (detectedObjectVisible > visibilityThreshold || hMom) {
+            if (!hMom) {
+                detectedObjectVisible -= 0.5;
+            } else {
+                detectedObjectVisible += 1;
+            }
             for (size_t contourIterator = 0; contourIterator < realTimeContours.size(); contourIterator++) {
                 cv::Rect spottedArea = cv::boundingRect(realTimeContours[contourIterator]);
                 if (spottedArea.area() < 3500) {
@@ -155,8 +115,9 @@ int main(int argc, char **argv) {
                 }
                 cv::rectangle(realTimeFrame, spottedArea, cv::Scalar(226, 0, 247), 5);
             }
-        } else {
-            detectedObjectVisible -= detectedObjectVisible / decrementRatio;
+        }
+        if (!hMom) {
+            detectedObjectVisible -= 0.5;
         }
         cout << "Detected: " << detectedObjectVisible<<endl;
         // Uncomment for viewing real-time contours
@@ -166,7 +127,6 @@ int main(int argc, char **argv) {
         cv::imshow("Realtime", realTimeFrame);
         if (cv::waitKey(30) == 27) {
             cout << "ESC Key" << endl;
-            //return 0;
             break; // Realtime Camera
         }
     }

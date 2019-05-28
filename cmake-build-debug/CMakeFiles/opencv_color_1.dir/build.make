@@ -91,58 +91,58 @@ opencv_color_1_OBJECTS = \
 # External object files for target opencv_color_1
 opencv_color_1_EXTERNAL_OBJECTS =
 
-/Users/utkubelemir/Desktop/opencv_color_1: CMakeFiles/opencv_color_1.dir/main.cpp.o
-/Users/utkubelemir/Desktop/opencv_color_1: CMakeFiles/opencv_color_1.dir/colors.cpp.o
-/Users/utkubelemir/Desktop/opencv_color_1: CMakeFiles/opencv_color_1.dir/build.make
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_stitching.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_superres.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_videostab.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_aruco.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_bgsegm.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_bioinspired.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_ccalib.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_dnn_objdetect.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_dpm.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_face.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_fuzzy.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_hfs.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_img_hash.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_line_descriptor.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_optflow.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_reg.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_rgbd.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_saliency.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_stereo.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_structured_light.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_surface_matching.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_tracking.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_xfeatures2d.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_ximgproc.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_xobjdetect.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_xphoto.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_shape.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_phase_unwrapping.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_dnn.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_video.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_datasets.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_ml.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_plot.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_objdetect.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_calib3d.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_features2d.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_flann.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_highgui.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_videoio.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_imgcodecs.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_photo.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_imgproc.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: /usr/local/lib/libopencv_core.3.4.5.dylib
-/Users/utkubelemir/Desktop/opencv_color_1: CMakeFiles/opencv_color_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /Users/utkubelemir/Desktop/opencv_color_1"
+opencv_color_1: CMakeFiles/opencv_color_1.dir/main.cpp.o
+opencv_color_1: CMakeFiles/opencv_color_1.dir/colors.cpp.o
+opencv_color_1: CMakeFiles/opencv_color_1.dir/build.make
+opencv_color_1: /usr/local/lib/libopencv_stitching.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_superres.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_videostab.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_aruco.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_bgsegm.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_bioinspired.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_ccalib.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_dnn_objdetect.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_dpm.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_face.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_fuzzy.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_hfs.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_img_hash.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_line_descriptor.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_optflow.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_reg.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_rgbd.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_saliency.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_stereo.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_structured_light.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_surface_matching.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_tracking.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_xfeatures2d.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_ximgproc.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_xobjdetect.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_xphoto.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_shape.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_phase_unwrapping.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_dnn.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_video.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_datasets.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_ml.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_plot.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_objdetect.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_calib3d.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_features2d.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_flann.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_highgui.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_videoio.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_imgcodecs.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_photo.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_imgproc.3.4.5.dylib
+opencv_color_1: /usr/local/lib/libopencv_core.3.4.5.dylib
+opencv_color_1: CMakeFiles/opencv_color_1.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/utkubelemir/Desktop/AYBU-GraduationProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable opencv_color_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opencv_color_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/opencv_color_1.dir/build: /Users/utkubelemir/Desktop/opencv_color_1
+CMakeFiles/opencv_color_1.dir/build: opencv_color_1
 
 .PHONY : CMakeFiles/opencv_color_1.dir/build
 
