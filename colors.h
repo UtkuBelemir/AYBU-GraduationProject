@@ -1,6 +1,6 @@
 #import "opencv2/core/types.hpp"
-#ifndef OPENCV_COLOR_1_COLORS_H
-#define OPENCV_COLOR_1_COLORS_H
+#ifndef GRADUATION_PROJECT_COLORS_H
+#define GRADUATION_PROJECT_COLORS_H
 
 
 class Colors {
@@ -42,4 +42,4 @@ class Colors {
 };
 
 
-#endif //OPENCV_COLOR_1_COLORS_H
+#endif //GRADUATION_PROJECT_COLORS_H
